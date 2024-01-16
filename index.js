@@ -28,6 +28,10 @@ app.get('/', (req, res) => {
   res.status(200).json({ url: 'home' })
 })
 
+app.get('/test', (req, res) => {
+  res.status(200).json({ url: 'test' })
+})
+
 const uploadFile = (req, res, next) => {
   if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).send('No files were uploaded.')
