@@ -7,8 +7,8 @@ const cors = require('cors')
 
 const app = express()
 
-app.use(fileUpload())
 app.use(cors())
+app.use(fileUpload())
 app.use(express.json())
 
 cloudinary.config({
