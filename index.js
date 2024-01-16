@@ -25,7 +25,7 @@ cloudinary.config({
 })
 
 app.get('/', (req, res) => {
-  res.send('home')
+  res.status(200).json({ url: 'home' })
 })
 
 const uploadFile = (req, res, next) => {
