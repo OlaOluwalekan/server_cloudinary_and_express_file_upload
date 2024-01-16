@@ -52,7 +52,7 @@ const uploadFile = (req, res, next) => {
 app.post('/uploads', uploadFile, async (req, res) => {
   try {
     const clo = await cloudinary.uploader.upload(req.image, {
-      folder: 'Bells Arena',
+      folder: 'Bells Arena/test',
     })
     res.status(200).json({ msg: 'file uploaded', link: clo.secure_url })
   } catch (error) {
